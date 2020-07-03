@@ -308,7 +308,7 @@ def generate_subtitles( # pylint: disable=too-many-locals,too-many-arguments
 
     if not dest:
         base = os.path.splitext(source_path)[0]
-        dest = "{base}.{format}".format(base=base, format=subtitle_file_format)
+        dest = "{base}_{locale}.{format}".format(base=base, locale=dst_language, format=subtitle_file_format)
 
     with open(dest, 'wb') as output_file:
         output_file.write(formatted_subtitles.encode("utf-8"))

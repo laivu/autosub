@@ -7,3 +7,5 @@ dist/
 MANIFEST
 *#*
 .vscode
+.idea
+test
